@@ -27,7 +27,11 @@
 			<a href="${pageContext.request.contextPath}/toGoodsDesc/${m.uuid}">
 			<table>
 				<tr>
-					<td><img alt="" src="${pageContext.request.contextPath}/static/images/logo.jpg"/></td>
+					<td>
+						<%-- <img alt="" src="${pageContext.request.contextPath}/static/images/logo.jpg"/> --%>
+						<img alt="" src="${m.imgPath}" width="100" height="100" />
+					</td>
+					
 					<td>${m.description }</td>
 				</tr>
 				<tr>

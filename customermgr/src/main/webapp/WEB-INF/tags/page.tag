@@ -1,5 +1,5 @@
 <%@tag pageEncoding="UTF-8" description="分页" %>
-<%@ attribute name="page" type="com.sishuok.pageutil.Page" required="true" description="分页对象" %>
+<%@ attribute name="page" type="org.my.pageutil.Page" required="true" description="分页对象" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <table width="100%" align="center">

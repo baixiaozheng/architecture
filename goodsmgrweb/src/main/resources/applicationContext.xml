@@ -41,9 +41,13 @@
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">  
         <property name="dataSource" ref="dataSource" />  
         <property name="packagesToScan">
-			<list>
-				<!-- <value>com.gmsdtech.model</value>
-				<value>com.gongming.model</value> -->
+				<list>
+				<value>org.my.architecture.cartmgr.vo</value>
+				<value>org.my.architecture.customermgr.vo</value>
+				<value>org.my.architecture.goodsmgr.vo</value>
+				<value>org.my.architecture.ordermgr.vo</value>
+				<value>org.my.architecture.storemgr.vo</value>
+				<value>org.my.architecture.filemgr.vo</value>
 			</list>
         </property>
         <property name="hibernateProperties">  
@@ -66,12 +70,12 @@
 	</bean> -->
 	
 		<!--memcached 客户端 SocketPool-->    
-    <!-- <bean id="memcachedPool" class="com.danga.MemCached.SockIOPool" factory-method="getInstance" 
+     <bean id="memcachedPool" class="com.danga.MemCached.SockIOPool" factory-method="getInstance" 
     init-method="initialize" destroy-method="shutDown">      
         <constructor-arg><value>neeaMemcachedPool</value></constructor-arg>  
 	        <property name="servers">    
 	            <list>    
-	                <value>192.168.1.106:2222</value>	                
+	                <value>192.168.0.102:2222</value>	                
 	            </list>    
 	        </property>    
 	        <property name="weights">
@@ -101,12 +105,12 @@
 	            <value>3000</value>    
 	        </property>    
 	    </bean>  	        
-	    memcached client    
+	   <!--  memcached client     -->
 	    <bean id="memCachedClient" class="com.danga.MemCached.MemCachedClient">    
 	        <constructor-arg>    
 	            <value>neeaMemcachedPool</value>    
 	        </constructor-arg>   
-	    </bean> -->
+	    </bean> 
 	<!-- mongodb -->	    
 	<!-- <mongo:mongo host="192.168.1.106" port="20000"></mongo:mongo>
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">     

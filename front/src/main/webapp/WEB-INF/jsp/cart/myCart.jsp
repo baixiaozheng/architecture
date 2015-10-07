@@ -26,7 +26,7 @@
 <table width="70%" align="center" border=1>
 <c:forEach var="m" items="${page.result}">
 		<tr>
-		<td><img alt="" src="${pageContext.request.contextPath}/static/images/logo.jpg"/></td>
+		<%-- <td><img alt="" src="${pageContext.request.contextPath}/static/images/logo.jpg"/></td> --%>
 		<td>${m.customerUuid }</td>
 		<td>${m.goodsUuid }</td>
 		<td>${m.buyNum }</td>
